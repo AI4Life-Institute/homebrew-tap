@@ -12,7 +12,7 @@ class Ghost < Formula
   desc "Control AI coding agents on your machine via Discord"
   homepage "https://github.com/AI4Life-Institute/ghost-in-the-shell"
   url "https://github.com/AI4Life-Institute/ghost-in-the-shell/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "4b69aba1896c18b1bab52cee78d7cefdfcb7e09ac84d5310f9cd72e9be99875c"
+  sha256 "PLACEHOLDER_FILL_ON_FIRST_RELEASE"
   license "Nonstandard"
 
   head "https://github.com/AI4Life-Institute/ghost-in-the-shell.git", branch: "master"
@@ -33,14 +33,20 @@ class Ghost < Formula
     bin.install_symlink libexec/"bin/gits"
   end
 
+  def post_install
+    # Launch setup wizard immediately after install
+    system bin/"ghost"
+  end
+
   def caveats
     <<~EOS
-      Create a .env file with your Discord bot token before starting:
+      Run the setup wizard anytime to reconfigure:
 
-        GITS_DISCORD_TOKEN=your-bot-token
-        ALLOWED_GUILDS=["your-server-id"]
+        ghost
 
-      Then run: ghost start
+      To restart the background service:
+
+        ghost restart
     EOS
   end
 
