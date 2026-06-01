@@ -11,8 +11,8 @@
 class Ghost < Formula
   desc "Control AI coding agents on your machine via Discord"
   homepage "https://github.com/AI4Life-Institute/ghost-in-the-shell"
-  url "https://github.com/AI4Life-Institute/ghost-in-the-shell/archive/refs/tags/v0.2.54.tar.gz"
-  sha256 "8b366f87b6bdaec494e2633272c611d79e3af1d5031e12692cfb4d8ebb81fcd2"
+  url "https://github.com/AI4Life-Institute/ghost-in-the-shell/archive/refs/tags/v0.2.55.tar.gz"
+  sha256 "98bd012cbe20dda3f14031078e4338d82a9271c3d302c36e2484b878bb0197e1"
   license "Nonstandard"
 
   head "https://github.com/AI4Life-Institute/ghost-in-the-shell.git", branch: "master"
